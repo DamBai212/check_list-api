@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+CheckList.create(title: "Buy food: milk, bread, fruits", done: false)
+CheckList.create(title: "Imagine Dragons tickets", done: false)

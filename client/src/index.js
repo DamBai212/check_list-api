@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import About from './Containers/About';
+import LinkedinProfile from './Components/LinkedinProfile.js'
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configureStore from './store';
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path='/' component={App} />
           <Route path="/about/" component={About} />
+          <Route path="/linkedIn/" component={LinkedinProfile} />
         </Switch>
       </Router>    
       {/* <App /> */}

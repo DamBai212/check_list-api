@@ -5,7 +5,7 @@ class CheckListsController < ApplicationController
   end
 
   def create
-    check_list = CheckList.create(check-list_param)
+    check_list = CheckList.create(check_list_param)
     render json: check_list
   end
 
@@ -15,10 +15,11 @@ class CheckListsController < ApplicationController
     render json: check_list
   end
 
-  def destory
+  def destroy
     check_list = CheckList.find(params[:id])
-    check_list.destory
-    head :no-content, status: :ok
+    check_list.destroy
+    check_lists = CheckList.order("created_at DESC")
+    render json: check_lists
   end
 
   private

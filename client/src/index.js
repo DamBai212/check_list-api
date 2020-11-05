@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import About from './Containers/About';
-import LinkedinProfile from './Components/LinkedinProfile.js'
+import Home from './Containers/Home';
+import About from './Components/About.js'
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configureStore from './store';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 
 const store = configureStore();
@@ -15,10 +15,25 @@ const store = configureStore();
 ReactDOM.render(
     <Provider store={store}>
       <Router>
+
+      <nav>
+          <ul className="header">
+            <li>
+              <Link to="/">CheckList</Link>
+            </li>
+            <li>
+              <Link to="/about/">About</Link>
+            </li>
+            <li>
+              <Link to="/home/">Home</Link>
+            </li>
+          </ul>
+        </nav>
+
         <Switch>
           <Route exact path='/' component={App} />
+          <Route path="/home/" component={Home} />
           <Route path="/about/" component={About} />
-          <Route path="/linkedIn/" component={LinkedinProfile} />
         </Switch>
       </Router>    
       {/* <App /> */}

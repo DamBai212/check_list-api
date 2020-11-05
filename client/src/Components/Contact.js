@@ -6,9 +6,10 @@ class Contact extends Component {
     render() {
         return(
             <div>
-              <h2>WANT TO HIRE ME?</h2>
-              <p> Gimme a call +43 46 645  </p>
-      </div>           
+            <h2>Contact</h2>
+            <p>  Add me <a href="https://www.linkedin.com/in/damany-bailey/">Linkedin</a></p>
+    
+          </div>
         );
     }
 }

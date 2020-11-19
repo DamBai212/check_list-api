@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import check_listsReducer from './check_listsReducer'
+import CheckListsReducer from './CheckListsReducer'
 
 const rootReducer = combineReducers ({
-    check_lists:  check_listsReducer
+    check_lists:  CheckListsReducer
 });
 
 export default rootReducer;

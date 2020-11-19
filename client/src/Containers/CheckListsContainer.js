@@ -13,6 +13,7 @@ class CheckListsContainer extends Component {
     .catch(error => console.log(error))
   }
 
+  //refactor createCheckList function to be async
   createCheckList = (title) => {
     if (!(title === '')) {
       fetch('http://localhost:3001/api/v1/check_lists', {
@@ -36,7 +37,7 @@ class CheckListsContainer extends Component {
         body: JSON.stringify({check_list: {done: params.checked}})
           })
           .then((resp) => resp.json())
-          .then(data => {
+          .then(() => {
             this.props.dispatch(toggleCheckList(params.id))
       })
       .catch(error => console.log(error))      

@@ -1,7 +1,7 @@
 import {LOAD_CHECKLISTS, ADD_CHECKLIST, TOGGLE_CHECKLIST, DELETE_CHECKLIST} from '../Actions/actionTypes'
 
 
-function check_listsReducer(state = [], action) 
+function CheckListsReducer(state = [], action) 
 
 {
 
@@ -33,4 +33,4 @@ function check_listsReducer(state = [], action)
     }
 }
 
-export default check_listsReducer
+export default CheckListsReducer

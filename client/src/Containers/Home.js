@@ -27,6 +27,10 @@ class Home extends Component {
         })
     }
 
+    sayHello = () => {
+        alert('You clicked me!');
+      }
+      
     render() {
         return (
             <div className="container">
@@ -35,7 +39,7 @@ class Home extends Component {
                     <button onClick={()=>this.checkListToggle()}> Checklist</button>
                     <button onClick={()=>this.aboutToggle()}> About</button>
                     <button onClick={()=>this.contactToggle()}> Contact</button>
-                    
+                    <button onClick={this.sayHello}>Default</button>
 
                     {this.state.checkList ?<CheckListsContainer/> : null}
                     {this.state.about ?<About /> : null}

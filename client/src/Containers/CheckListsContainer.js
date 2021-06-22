@@ -17,7 +17,6 @@ class CheckListsContainer extends Component {
     .catch(error => console.log(error))
   }
 
-
   //refactor createCheckList function to be async
   createCheckList = async (title) => {
     let url = 'http://localhost:3001/api/v1/check_lists';

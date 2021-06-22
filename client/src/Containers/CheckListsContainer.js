@@ -73,10 +73,6 @@ class CheckListsContainer extends Component {
     .catch(error => console.log(error))
   }
 
-   
-
-  
-
   componentDidMount() {
     this.getCheckLists()
   }

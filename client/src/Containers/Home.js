@@ -7,7 +7,7 @@ class Home extends Component {
 	state={
         about: false,
         contact: false,
-        checkList: false
+        checkList: false,
     }
 
     aboutToggle = () => {
